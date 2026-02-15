@@ -1,0 +1,97 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="800"
+        x:Class="AlbionCalculator.MainWindow"
+        Title="알비온 계산기"
+        Width="400" Height="850"
+        CanResize="False"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="True">
+    
+    <Panel>
+        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="Black"
+                    TintOpacity="1"
+                    MaterialOpacity="0.65" />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+
+        <TextBlock Text="알비온 계산기" IsHitTestVisible="False" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,10,0,0" FontWeight="Bold"/>
+        
+        <StackPanel Margin="20, 40, 20, 20" Spacing="10">
+            
+            <!-- 구매 섹션 -->
+            <TextBlock Text="구매" FontWeight="Bold" FontSize="18" Margin="0,10,0,0"/>
+            
+            <TextBlock Text="수량"/>
+            <TextBox Name="Quantity" Watermark="1" TextChanged="OnInputChanged"/>
+
+            <TextBlock Text="구매 금액"/>
+            <TextBox Name="BuyPrice" Watermark="0" TextChanged="OnInputChanged"/>
+            
+            <TextBlock Text="구매 설정 수수료 %"/>
+            <TextBox Name="BuySetupFee" Watermark="2.5" TextChanged="OnInputChanged"/>
+
+            <!-- 판매 섹션 -->
+            <TextBlock Text="판매" FontWeight="Bold" FontSize="18" Margin="0,20,0,0"/>
+            <TextBlock Text="판매 금액"/>
+            <TextBox Name="SellPrice" Watermark="0" TextChanged="OnInputChanged"/>
+            
+            <TextBlock Text="판매 세금 %"/>
+            <TextBox Name="SellTax" Watermark="4" TextChanged="OnInputChanged"/>
+            <TextBlock Text="판매 설정 수수료 %"/>
+            <TextBox Name="SellSetupFee" Watermark="2.5" TextChanged="OnInputChanged"/>
+
+            <!-- 계산 결과 섹션 -->
+            <TextBlock Text="계산 결과" FontWeight="Bold" FontSize="18" Margin="0,20,0,0"/>
+            
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <TextBlock Text="총 투자 금액:" VerticalAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Name="TotalInvestmentText" Text="0" VerticalAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <TextBlock Text="총 수익:" VerticalAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Name="TotalProfitText" Text="0" VerticalAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <TextBlock Text="수익률:" VerticalAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Name="ProfitMarginText" Text="0%" VerticalAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <TextBlock Text="손익분기 수량:" VerticalAlignment="Center" FontWeight="Bold"/>
+                <Button Content="?" Width="20" Height="20" Padding="0" CornerRadius="10" FontSize="12" 
+                        VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                    <Button.Flyout>
+                        <Flyout Opened="BreakEvenQuantityFlyout_Opened">
+                            <TextBlock Text="계산 중..."/>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+                <TextBlock Name="BreakEvenQuantityText" Text="0" VerticalAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <TextBlock Text="최소 추천 가격:" VerticalAlignment="Center" FontWeight="Bold"/>
+                <Button Content="?" Width="20" Height="20" Padding="0" CornerRadius="10" FontSize="12" 
+                        VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                    <Button.Flyout>
+                        <Flyout Opened="BreakEvenPriceFlyout_Opened">
+                            <TextBlock Text="계산 중..."/>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+                <TextBlock Name="BreakEvenPriceText" Text="0" VerticalAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Panel>
+</Window>
