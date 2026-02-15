@@ -1,37 +1,57 @@
 using Avalonia.Controls;
 using Avalonia.Media;
-using NetSparkleUpdater;
-using NetSparkleUpdater.SignatureVerifiers;
-using NetSparkleUpdater.UI.Avalonia;
 using System;
+using System.Net.Http;
+using System.Reflection;
+using System.Threading.Tasks;
 
 namespace AlbionCalculator;
 
 public partial class MainWindow : Window
 {
-    private SparkleUpdater _sparkle;
-
     public MainWindow()
     {
         InitializeComponent();
-        InitializeUpdater();
+        SetWindowVersion();
+        CheckForUpdatesAsync();
     }
 
-    private async void InitializeUpdater()
+    private void SetWindowVersion()
     {
-        // TODO: Replace with your actual GitHub repository URL
-        // Example: https://github.com/YourUser/YourRepo
-        string manifestUrl = "https://github.com/CorbyO/AlbionCalculator";
-
-        _sparkle = new SparkleUpdater(manifestUrl, new Ed25519Checker(NetSparkleUpdater.Enums.SecurityMode.Unsafe))
+        var version = Assembly.GetExecutingAssembly().GetName().Version;
+        if (version != null)
         {
-            UIFactory = new UIFactory(null),
-            // Use this if you want to check for updates silently in the background
-            // CheckServerFileName = false 
-        };
-        
-        // Start the update loop
-        _sparkle.StartLoop(true, true);
+            this.Title = $"Albion Calculator v{version.Major}.{version.Minor}.{version.Build}";
+        }
+    }
+
+    private async void CheckForUpdatesAsync()
+    {
+        try
+        {
+            // GitHub에 'version.txt' 파일을 올리고 그 주소를 아래에 입력하세요.
+            // 예: 1.0.1 같은 텍스트만 들어있는 파일
+            string updateUrl = "https://raw.githubusercontent.com/CorbyO/AlbionCalculator/main/version.txt";
+            
+            using var client = new HttpClient();
+            client.Timeout = TimeSpan.FromSeconds(2); // 2초 안에 응답 없으면 무시 (앱 실행 지연 방지)
+            
+            var remoteVersionText = await client.GetStringAsync(updateUrl);
+            
+            if (Version.TryParse(remoteVersionText.Trim(), out var remoteVersion))
+            {
+                var currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
+                if (currentVersion != null && remoteVersion > currentVersion)
+                {
+                    // 업데이트가 있을 경우 타이틀에 표시하거나 알림창을 띄울 수 있습니다.
+                    this.Title += " (최신 버전 업데이트 가능!)";
+                }
+            }
+        }
+        catch
+        {
+            // 인터넷 연결이 없거나 파일이 없으면 조용히 무시
+        }
     }
 
     // 실수 변환 도우미 함수: 빈 값이면 기본값 사용
