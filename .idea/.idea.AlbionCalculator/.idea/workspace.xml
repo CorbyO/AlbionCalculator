@@ -8,16 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66334199-7acc-47a1-bdbc-f44253ab2c59" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculator.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculator/AlbionCalculator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/AlbionCalculator.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version.txt" beforeDir="false" afterPath="$PROJECT_DIR$/version.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AlbionCalculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlbionCalculator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculator.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +25,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ceaca09f3944680b668dee8e1e0370b100a00/f7/eee67fcf/ClassicDesktopStyleApplicationLifetimeExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/33a65d1c3065441d921b46aff1c47107d930/f3/04dc550b/ZipFileExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a1d66899aa5e4d5383a341dc3cda48d02aa00/5b/62e97f30/SparkleUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6b7f037ba7b44df80b8d3aa7e58eeb2e8e938/58/968f11de/Version.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculator/App.axaml" root0="FORCE_HIGHLIGHTING" />
@@ -71,7 +65,7 @@
     "폴더에 게시.Publish AlbionCalculatorUpdater to folder.executor": "Run"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET 프로젝트.AlbionCalculator">
+  <component name="RunManager" selected="폴더에 게시.Publish AlbionCalculatorUpdater to folder">
     <configuration name="CI" type="BatchConfigurationType" factoryName="Batch">
       <module name="rider.module" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -143,7 +137,7 @@
       <updated>1771134611270</updated>
       <workItem from="1771134613912" duration="14900000" />
       <workItem from="1771165226858" duration="1964000" />
-      <workItem from="1771334844809" duration="1239000" />
+      <workItem from="1771334844809" duration="2161000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -161,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771138847385</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1.0.0">
+      <option name="closed" value="true" />
+      <created>1771336171553</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771336171553</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +186,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="first commit" />
     <MESSAGE value="version" />
-    <option name="LAST_COMMIT_MESSAGE" value="version" />
+    <MESSAGE value="1.0.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

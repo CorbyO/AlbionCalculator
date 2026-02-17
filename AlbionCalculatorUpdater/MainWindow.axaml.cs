@@ -2,7 +2,6 @@ using Avalonia.Controls;
 using Avalonia.Threading;
 using System.Diagnostics;
 using System.IO.Compression;
-using System.Net.Http;
 
 namespace AlbionCalculatorUpdater;
 
@@ -21,8 +20,9 @@ public partial class MainWindow : Window
 
     private async Task CheckAndRunUpdate()
     {
-        string targetExeName = "ac.exe";
-        string currentDir = AppDomain.CurrentDomain.BaseDirectory;
+        string targetExeName = "AlbionCalculator.exe";
+        string currentDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "runtime");
+        Log(currentDir);
         string targetExePath = Path.Combine(currentDir, targetExeName);
         string versionUrl = "https://raw.githubusercontent.com/CorbyO/AlbionCalculator/main/version.txt";
 
@@ -60,9 +60,19 @@ public partial class MainWindow : Window
         }
         catch (Exception ex)
         {
-            UpdateStatus($"Error: {ex.Message}");
-            await Task.Delay(3000);
-            Close();
+            Log(ex.ToString());
+            
+            if (File.Exists(targetExePath))
+            {
+                StartAc(targetExePath);
+                Close();
+            }
+            else
+            {
+                UpdateStatus($"Error: {ex.Message}");
+                await Task.Delay(3000);
+                Close();
+            }
         }
     }
 
@@ -132,18 +142,19 @@ public partial class MainWindow : Window
         }
 
         // Kill ac.exe if running
-        var processes = Process.GetProcessesByName("ac");
+        var processes = Process.GetProcessesByName("AlbionCalculator");
         foreach (var p in processes)
         {
             try { p.Kill(); await p.WaitForExitAsync(); } catch { }
         }
-
+        
         using (ZipArchive archive = ZipFile.OpenRead(tempZipPath))
         {
             foreach (ZipArchiveEntry entry in archive.Entries)
             {
                 string destinationPath = Path.Combine(destinationDir, entry.FullName);
                 string? destinationSubDir = Path.GetDirectoryName(destinationPath);
+                Log(destinationSubDir);
 
                 if (!string.IsNullOrEmpty(destinationSubDir) && !Directory.Exists(destinationSubDir))
                 {
@@ -173,5 +184,11 @@ public partial class MainWindow : Window
                 UseShellExecute = true
             });
         }
+    }
+
+    [Conditional("DEBUG")]
+    private void Log(string? message)
+    {
+        Console.WriteLine(message);
     }
 }
