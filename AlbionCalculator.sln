@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbionCalculator", "AlbionCalculator\AlbionCalculator.csproj", "{FED4F5D5-A501-46B5-A96A-4E9383ABF286}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbionCalculatorUpdater", "AlbionCalculatorUpdater\AlbionCalculatorUpdater.csproj", "{12345678-1234-1234-1234-123456789012}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{FED4F5D5-A501-46B5-A96A-4E9383ABF286}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FED4F5D5-A501-46B5-A96A-4E9383ABF286}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FED4F5D5-A501-46B5-A96A-4E9383ABF286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12345678-1234-1234-1234-123456789012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12345678-1234-1234-1234-123456789012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12345678-1234-1234-1234-123456789012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12345678-1234-1234-1234-123456789012}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
