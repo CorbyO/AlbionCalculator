@@ -8,9 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66334199-7acc-47a1-bdbc-f44253ab2c59" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/ProcessExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AlbionCalculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlbionCalculator/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AlbionCalculator.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/AlbionCalculatorUpdater.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/AlbionCalculatorUpdater.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,16 +36,21 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/33a65d1c3065441d921b46aff1c47107d930/f3/04dc550b/ZipFileExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a1d66899aa5e4d5383a341dc3cda48d02aa00/5b/62e97f30/SparkleUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6b7f037ba7b44df80b8d3aa7e58eeb2e8e938/58/968f11de/Version.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b6554a1959c74787a5e7d11c826e913d6c38/a4/3c73a4ff/ZipFile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculator/App.axaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculator/App.axaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculator/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -76,7 +89,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Publish AlbionCalculatorUpdater to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
-      <riderPublish configuration="Release" delete_existing_files="true" platform="Any CPU" produce_single_file="true" self_contained="true" target_folder="$PROJECT_DIR$/AlbionCalculatorUpdater/bin/Release/net9.0/publish" target_framework="net9.0" uuid_high="1311768465173123636" uuid_low="1311693407469998098" />
+      <riderPublish configuration="Release" delete_existing_files="true" platform="Any CPU" target_folder="$PROJECT_DIR$/AlbionCalculatorUpdater/bin/Release/net9.0/publish" target_framework="net48" uuid_high="1311768465173123636" uuid_low="1311693407469998098" />
       <method v="2" />
     </configuration>
     <configuration name="AlbionCalculator" type="DotNetProject" factoryName=".NET Project">
@@ -137,7 +150,7 @@
       <updated>1771134611270</updated>
       <workItem from="1771134613912" duration="14900000" />
       <workItem from="1771165226858" duration="1964000" />
-      <workItem from="1771334844809" duration="2161000" />
+      <workItem from="1771334844809" duration="5739000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -163,7 +176,23 @@
       <option name="project" value="LOCAL" />
       <updated>1771336171553</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="업데이터 수정">
+      <option name="closed" value="true" />
+      <created>1771337285954</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1771337285954</updated>
+    </task>
+    <task id="LOCAL-00005" summary="빌드 용량 감소">
+      <option name="closed" value="true" />
+      <created>1771337818940</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1771337818940</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +216,9 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="version" />
     <MESSAGE value="1.0.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.0.0" />
+    <MESSAGE value="업데이터 수정" />
+    <MESSAGE value="빌드 용량 감소" />
+    <option name="LAST_COMMIT_MESSAGE" value="빌드 용량 감소" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

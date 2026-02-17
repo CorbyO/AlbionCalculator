@@ -71,7 +71,10 @@ public partial class MainWindow : Window
         }
     }
     
-    // 업데이트 수행 메서드 (필요 시 버튼 클릭 이벤트 등에서 호출)
+    /// <summary>
+    /// 업데이트 수행 메서드 (필요 시 버튼 클릭 이벤트 등에서 호출)
+    /// </summary>
+    /// <param name="newVersion"></param>
     private async Task PerformUpdateAsync(Version newVersion)
     {
         try
@@ -114,7 +117,12 @@ public partial class MainWindow : Window
         }
     }
 
-    // 실수 변환 도우미 함수: 빈 값이면 기본값 사용
+    /// <summary>
+    /// 실수 변환 도우미 함수: 빈 값이면 기본값 사용
+    /// </summary>
+    /// <param name="text"></param>
+    /// <param name="defaultValue"></param>
+    /// <returns></returns>
     private double ParseDouble(string? text, double defaultValue)
     {
         if (string.IsNullOrWhiteSpace(text))
@@ -128,7 +136,11 @@ public partial class MainWindow : Window
         return defaultValue;
     }
 
-    // 입력값이 변경될 때마다 모든 계산 수행
+    /// <summary>
+    /// 입력값이 변경될 때마다 모든 계산 수행
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     public void OnInputChanged(object? sender, TextChangedEventArgs e)
     {
         CalculateAll();
