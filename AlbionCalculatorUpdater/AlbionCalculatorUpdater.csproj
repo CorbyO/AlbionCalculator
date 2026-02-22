@@ -10,6 +10,8 @@
     <ItemGroup>
         <Reference Include="System.IO.Compression" />
         <Reference Include="System.IO.Compression.FileSystem" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Xml.Linq" />
         
         <Compile Remove="App.axaml.cs"/>
         <Compile Remove="MainWindow.axaml.cs"/>

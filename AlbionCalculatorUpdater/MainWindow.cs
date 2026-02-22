@@ -4,10 +4,12 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace AlbionCalculatorUpdater;
 
@@ -94,7 +96,7 @@ public class MainWindow : Form
         var currentDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "runtime");
         Log(currentDir);
         var targetExePath = Path.Combine(currentDir, targetExeName);
-        var versionUrl = "https://raw.githubusercontent.com/CorbyO/AlbionCalculator/main/version.txt";
+        var versionUrl = "https://raw.githubusercontent.com/CorbyO/AlbionCalculator/main/AlbionCalculator/AlbionCalculator.csproj";
 
         try
         {
@@ -104,7 +106,16 @@ public class MainWindow : Form
             string targetVersionText;
             using (var client = new WebClient())
             {
-                targetVersionText = (await client.DownloadStringTaskAsync(versionUrl)).Trim();
+                client.CachePolicy = new System.Net.Cache.RequestCachePolicy(System.Net.Cache.RequestCacheLevel.NoCacheNoStore);
+                var xmlContent = await client.DownloadStringTaskAsync(versionUrl);
+                var doc = XDocument.Parse(xmlContent);
+                targetVersionText = doc.Descendants("Version").FirstOrDefault()?.Value;
+                
+                if (string.IsNullOrWhiteSpace(targetVersionText))
+                {
+                    throw new Exception("Version info not found in csproj");
+                }
+                targetVersionText = targetVersionText.Trim();
             }
             var targetVersion = ParseVersion(targetVersionText);
 
@@ -257,6 +268,8 @@ public class MainWindow : Form
 
         using (var client = new WebClient())
         {
+            client.CachePolicy = new System.Net.Cache.RequestCachePolicy(System.Net.Cache.RequestCacheLevel.NoCacheNoStore);
+            Log($"download: {downloadUrl}");
             await client.DownloadFileTaskAsync(downloadUrl, tempZipPath);
         }
 
