@@ -1,0 +1,158 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="800"
+             x:Class="AlbionCalculator.FishSauceCalculatorView">
+    
+    <UserControl.Styles>
+        <Style Selector="Button.TextButton">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <ContentPresenter Content="{TemplateBinding Content}"/>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+    </UserControl.Styles>
+
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="15">
+            <TextBlock Text="피시 소스 효율 계산기" FontWeight="Bold" FontSize="20" Margin="0,0,0,10"/>
+
+            <!-- 공통 재료 가격 입력 -->
+            <Border BorderBrush="#33FFFFFF" BorderThickness="1" CornerRadius="5" Padding="10">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="재료 가격 입력" FontWeight="Bold" FontSize="16"/>
+                    
+                    <Grid ColumnDefinitions="*, 10, *">
+                        <StackPanel Grid.Column="0" Spacing="5">
+                            <TextBlock Text="토막낸 생선"/>
+                            <TextBox Name="ChoppedFishPrice" Watermark="0" TextChanged="OnInputChanged"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="2" Spacing="5">
+                            <TextBlock Text="해조"/>
+                            <TextBox Name="SeaweedPrice" Watermark="0" TextChanged="OnInputChanged"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- 기본 피시 소스 -->
+            <Border BorderBrush="#33FFFFFF" BorderThickness="1" CornerRadius="5" Padding="10">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="기본 피시 소스" FontWeight="Bold" FontSize="16"/>
+                    
+                    <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="*, Auto, *">
+                        <!-- 1행: 라벨 -->
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="재료 판매 시" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                        <TextBlock Grid.Row="0" Grid.Column="2" Text="제작 후 판매 시" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                        
+                        <!-- 2행: 가격 및 화살표 -->
+                        <Button Grid.Row="1" Grid.Column="0" Classes="TextButton" Click="OnCopyText" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Name="BasicMaterialPrice" Text="0" FontSize="20" FontWeight="Bold"/>
+                            <Button.Flyout>
+                                <Flyout ShowMode="TransientWithDismissOnPointerMoveAway">
+                                    <TextBlock Text="복사되었습니다!"/>
+                                </Flyout>
+                            </Button.Flyout>
+                        </Button>
+                        
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="→" FontSize="24" VerticalAlignment="Center" Margin="10,0"/>
+                        
+                        <TextBox Grid.Row="1" Grid.Column="2" Name="BasicMarketPrice" Watermark="시장 가격 기입" TextChanged="OnInputChanged" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" MinWidth="100" TextAlignment="Center" VerticalAlignment="Center"/>
+                        
+                        <!-- 3행: 이득/손해 -->
+                        <Button Grid.Row="2" Grid.Column="2" Classes="TextButton" Click="OnCopyText" HorizontalAlignment="Center" Margin="0,5,0,0">
+                            <TextBlock Name="BasicDiff" Text="0 이득 (0%)" FontSize="14"/>
+                            <Button.Flyout>
+                                <Flyout ShowMode="TransientWithDismissOnPointerMoveAway">
+                                    <TextBlock Text="복사되었습니다!"/>
+                                </Flyout>
+                            </Button.Flyout>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- 멋진 피시 소스 -->
+            <Border BorderBrush="#33FFFFFF" BorderThickness="1" CornerRadius="5" Padding="10">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="멋진 피시 소스" FontWeight="Bold" FontSize="16"/>
+                    
+                    <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="*, Auto, *">
+                        <!-- 1행: 라벨 -->
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="재료 판매 시" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                        <TextBlock Grid.Row="0" Grid.Column="2" Text="제작 후 판매 시" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                        
+                        <!-- 2행: 가격 및 화살표 -->
+                        <Button Grid.Row="1" Grid.Column="0" Classes="TextButton" Click="OnCopyText" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Name="FancyMaterialPrice" Text="0" FontSize="20" FontWeight="Bold"/>
+                            <Button.Flyout>
+                                <Flyout ShowMode="TransientWithDismissOnPointerMoveAway">
+                                    <TextBlock Text="복사되었습니다!"/>
+                                </Flyout>
+                            </Button.Flyout>
+                        </Button>
+                        
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="→" FontSize="24" VerticalAlignment="Center" Margin="10,0"/>
+                        
+                        <TextBox Grid.Row="1" Grid.Column="2" Name="FancyMarketPrice" Watermark="시장 가격 기입" TextChanged="OnInputChanged" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" MinWidth="100" TextAlignment="Center" VerticalAlignment="Center"/>
+                        
+                        <!-- 3행: 이득/손해 -->
+                        <Button Grid.Row="2" Grid.Column="2" Classes="TextButton" Click="OnCopyText" HorizontalAlignment="Center" Margin="0,5,0,0">
+                            <TextBlock Name="FancyDiff" Text="0 이득 (0%)" FontSize="14"/>
+                            <Button.Flyout>
+                                <Flyout ShowMode="TransientWithDismissOnPointerMoveAway">
+                                    <TextBlock Text="복사되었습니다!"/>
+                                </Flyout>
+                            </Button.Flyout>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <!-- 특별한 피시 소스 -->
+            <Border BorderBrush="#33FFFFFF" BorderThickness="1" CornerRadius="5" Padding="10">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="특별한 피시 소스" FontWeight="Bold" FontSize="16"/>
+                    
+                    <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="*, Auto, *">
+                        <!-- 1행: 라벨 -->
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="재료 판매 시" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                        <TextBlock Grid.Row="0" Grid.Column="2" Text="제작 후 판매 시" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                        
+                        <!-- 2행: 가격 및 화살표 -->
+                        <Button Grid.Row="1" Grid.Column="0" Classes="TextButton" Click="OnCopyText" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Name="SpecialMaterialPrice" Text="0" FontSize="20" FontWeight="Bold"/>
+                            <Button.Flyout>
+                                <Flyout ShowMode="TransientWithDismissOnPointerMoveAway">
+                                    <TextBlock Text="복사되었습니다!"/>
+                                </Flyout>
+                            </Button.Flyout>
+                        </Button>
+                        
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="→" FontSize="24" VerticalAlignment="Center" Margin="10,0"/>
+                        
+                        <TextBox Grid.Row="1" Grid.Column="2" Name="SpecialMarketPrice" Watermark="시장 가격 기입" TextChanged="OnInputChanged" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" MinWidth="100" TextAlignment="Center" VerticalAlignment="Center"/>
+                        
+                        <!-- 3행: 이득/손해 -->
+                        <Button Grid.Row="2" Grid.Column="2" Classes="TextButton" Click="OnCopyText" HorizontalAlignment="Center" Margin="0,5,0,0">
+                            <TextBlock Name="SpecialDiff" Text="0 이득 (0%)" FontSize="14"/>
+                            <Button.Flyout>
+                                <Flyout ShowMode="TransientWithDismissOnPointerMoveAway">
+                                    <TextBlock Text="복사되었습니다!"/>
+                                </Flyout>
+                            </Button.Flyout>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

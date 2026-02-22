@@ -1,0 +1,16 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="800"
+             x:Class="AlbionCalculator.WelcomeView">
+    
+    <StackPanel Margin="20" Spacing="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Text="Welcome" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center"/>
+        <TextBlock Text="알비온 계산기에 오신 것을 환영합니다." FontSize="16" HorizontalAlignment="Center"/>
+        <TextBlock Text="왼쪽 메뉴에서 원하는 계산기를 선택하여 사용하세요." FontSize="14" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+        
+        <TextBlock Text="Tip: 왼쪽 메뉴에 마우스를 올리면 각 기능에 대한 설명을 볼 수 있습니다." 
+                   FontSize="12" FontStyle="Italic" Foreground="Gray" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+    </StackPanel>
+</UserControl>

@@ -8,17 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66334199-7acc-47a1-bdbc-f44253ab2c59" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/ProcessExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlbionCalculator/FishSauceCalculatorView.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlbionCalculator/FishSauceCalculatorView.axaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlbionCalculator/ResellCalculatorView.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlbionCalculator/ResellCalculatorView.axaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlbionCalculator/WelcomeView.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlbionCalculator/WelcomeView.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AlbionCalculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlbionCalculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculator.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/AlbionCalculatorUpdater.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/AlbionCalculatorUpdater.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/App.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +40,9 @@
     <setting file="file://$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculator/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -60,25 +58,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET 프로젝트.AlbionCalculator.Browser.executor": "Run",
-    ".NET 프로젝트.AlbionCalculator.Desktop.executor": "Run",
-    ".NET 프로젝트.AlbionCalculator.executor": "Run",
-    ".NET 프로젝트.AlbionCalculatorUpdater.executor": "Run",
-    "Batch.CI.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "settings.editor.selected.configurable": "com.android.studio.ml.templates",
-    "vue.rearranger.settings.migration": "true",
-    "폴더에 게시.Publish AlbionCalculatorUpdater to folder.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET 프로젝트.AlbionCalculator.Browser.executor&quot;: &quot;Run&quot;,
+    &quot;.NET 프로젝트.AlbionCalculator.Desktop.executor&quot;: &quot;Run&quot;,
+    &quot;.NET 프로젝트.AlbionCalculator.executor&quot;: &quot;Run&quot;,
+    &quot;.NET 프로젝트.AlbionCalculatorUpdater.executor&quot;: &quot;Run&quot;,
+    &quot;Batch.CI.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.android.studio.ml.templates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;폴더에 게시.Publish AlbionCalculatorUpdater to folder.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="폴더에 게시.Publish AlbionCalculatorUpdater to folder">
+}</component>
+  <component name="RunManager" selected=".NET 프로젝트.AlbionCalculator">
     <configuration name="CI" type="BatchConfigurationType" factoryName="Batch">
       <module name="rider.module" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,6 +149,7 @@
       <workItem from="1771134613912" duration="14900000" />
       <workItem from="1771165226858" duration="1964000" />
       <workItem from="1771334844809" duration="5739000" />
+      <workItem from="1771780751216" duration="6460000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
