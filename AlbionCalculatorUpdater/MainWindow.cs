@@ -125,6 +125,7 @@ public class MainWindow : Form
             {
                 currentVersion = await GetCurrentVersion(targetExePath);
             }
+            Log($"Current version: {currentVersion}");
 
             if (!acExists || currentVersion < targetVersion)
             {

@@ -8,12 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66334199-7acc-47a1-bdbc-f44253ab2c59" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/AlbionCalculator/FishChoppingCalculatorView.axaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AlbionCalculator/FishChoppingCalculatorView.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AlbionCalculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlbionCalculator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculator.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AlbionCalculator/AlbionCalculator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/AlbionCalculator.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculator/FishChoppingCalculatorView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/FishChoppingCalculatorView.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/AlbionCalculatorUpdater.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/AlbionCalculatorUpdater.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +47,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a1d66899aa5e4d5383a341dc3cda48d02aa00/5b/62e97f30/SparkleUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6b7f037ba7b44df80b8d3aa7e58eeb2e8e938/40/b3d2621a/AssemblyName.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6b7f037ba7b44df80b8d3aa7e58eeb2e8e938/58/968f11de/Version.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6b7f037ba7b44df80b8d3aa7e58eeb2e8e938/62/505b7e7c/Assembly.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b6554a1959c74787a5e7d11c826e913d6c38/a4/3c73a4ff/ZipFile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e3a3b5d33b164c3fba4211220b2073133609c8/8c/a615139d/WebClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculator/App.axaml" root0="FORCE_HIGHLIGHTING" />
@@ -54,7 +58,7 @@
     <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/App.axaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.axaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AlbionCalculatorUpdater/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -71,6 +75,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET 프로젝트.AlbionCalculator (Version).executor": "Run",
     ".NET 프로젝트.AlbionCalculator.Browser.executor": "Run",
     ".NET 프로젝트.AlbionCalculator.Desktop.executor": "Run",
     ".NET 프로젝트.AlbionCalculator.executor": "Run",
@@ -89,7 +94,7 @@
     "폴더에 게시.Publish AlbionCalculatorUpdater to folder.executor": "Run"
   }
 }]]></component>
-  <component name="RunManager" selected="폴더에 게시.Publish AlbionCalculator to folder">
+  <component name="RunManager" selected=".NET 프로젝트.AlbionCalculator">
     <configuration name="CI" type="BatchConfigurationType" factoryName="Batch">
       <module name="rider.module" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -104,8 +109,29 @@
       <method v="2" />
     </configuration>
     <configuration name="Publish AlbionCalculatorUpdater to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
-      <riderPublish configuration="Release" delete_existing_files="true" platform="Any CPU" target_folder="$PROJECT_DIR$/AlbionCalculatorUpdater/bin/Release/net9.0/publish" target_framework="net48" uuid_high="1311768465173123636" uuid_low="1311693407469998098" />
+      <riderPublish configuration="Release" delete_existing_files="true" platform="Any CPU" target_folder="$PROJECT_DIR$/AlbionCalculatorUpdater/bin/Release/AlbionCalculator" target_framework="net48" uuid_high="1311768465173123636" uuid_low="1311693407469998098" />
       <method v="2" />
+    </configuration>
+    <configuration name="AlbionCalculator (Version)" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/AlbionCalculator/bin/Debug/net9.0/AlbionCalculator.exe" />
+      <option name="PROGRAM_PARAMETERS" value="--version" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AlbionCalculator/bin/Debug/net9.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="AUTO_ATTACH_CHILDREN" value="0" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/AlbionCalculator/AlbionCalculator.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net9.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
     </configuration>
     <configuration name="AlbionCalculator" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/AlbionCalculator/bin/Debug/net9.0/AlbionCalculator.exe" />
@@ -151,6 +177,7 @@
     </configuration>
     <list>
       <item itemvalue=".NET 프로젝트.AlbionCalculator" />
+      <item itemvalue=".NET 프로젝트.AlbionCalculator (Version)" />
       <item itemvalue=".NET 프로젝트.AlbionCalculatorUpdater" />
       <item itemvalue="Batch.CI" />
       <item itemvalue="폴더에 게시.Publish AlbionCalculator to folder" />
@@ -169,6 +196,7 @@
       <workItem from="1771334844809" duration="5739000" />
       <workItem from="1771780751216" duration="8630000" />
       <workItem from="1772411855035" duration="791000" />
+      <workItem from="1772413296904" duration="2976000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />

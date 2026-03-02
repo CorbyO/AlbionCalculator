@@ -12,7 +12,7 @@ class Program
         if (args.Length > 0 && args[0] == "--version")
         {
             var version = Assembly.GetExecutingAssembly().GetName().Version;
-            Console.WriteLine(version?.ToString() ?? "0.0.0.0");
+            Console.WriteLine(version?.ToString(3) ?? "0.0.0");
             return;
         }
 

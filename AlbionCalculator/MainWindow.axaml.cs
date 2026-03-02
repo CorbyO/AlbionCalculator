@@ -73,7 +73,14 @@ public partial class MainWindow : Window
         var version = Assembly.GetExecutingAssembly().GetName().Version;
         if (version != null)
         {
-            this.Title = $"Albion Calculator v{version.Major}.{version.Minor}.{version.Build}";
+            string versionString = $"v{version.Major}.{version.Minor}.{version.Build}";
+            this.Title = $"Albion Calculator {versionString}";
+            
+            var versionText = this.FindControl<TextBlock>("VersionText");
+            if (versionText != null)
+            {
+                versionText.Text = versionString;
+            }
         }
     }
 
