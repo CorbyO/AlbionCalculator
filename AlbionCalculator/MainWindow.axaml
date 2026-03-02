@@ -5,7 +5,7 @@
         mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="800"
         x:Class="AlbionCalculator.MainWindow"
         Title="알비온 계산기"
-        Width="800" Height="850"
+        Width="600" Height="850"
         CanResize="True"
         TransparencyLevelHint="AcrylicBlur"
         Background="Transparent"
@@ -28,13 +28,14 @@
                 <Grid RowDefinitions="Auto, *">
                     <StackPanel Margin="15,10,0,20">
                         <TextBlock Text="Albion Calculator" FontWeight="Bold" FontSize="16"/>
-                        <TextBlock Text="by Eutamias from America server" FontSize="10" Foreground="Gray" Margin="0,2,0,0"/>
+                        <TextBlock Text="by Eutamias at America" FontSize="10" Foreground="Gray" Margin="0,2,0,0"/>
                     </StackPanel>
                     
                     <ListBox Grid.Row="1" Name="FunctionList" SelectionChanged="FunctionList_SelectionChanged" Background="Transparent">
                         <ListBoxItem Content="Welcome" Tag="Welcome" ToolTip.Tip="환영 메시지 및 사용 안내"/>
                         <ListBoxItem Content="되팔이 계산기" Tag="Resell" ToolTip.Tip="아이템 구매 및 판매 시 수익을 계산합니다."/>
                         <ListBoxItem Content="피시 소스 효율" Tag="FishSauce" ToolTip.Tip="피시 소스 제작 효율을 계산합니다."/>
+                        <ListBoxItem Content="토막난 생선 효율" Tag="FishChopping" ToolTip.Tip="토막난 생선 가격 대비 영양분 가격을 계산합니다."/>
                     </ListBox>
                 </Grid>
             </Border>

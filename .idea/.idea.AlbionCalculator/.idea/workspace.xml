@@ -8,11 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66334199-7acc-47a1-bdbc-f44253ab2c59" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/AlbionCalculator/FishChoppingCalculatorView.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlbionCalculator/FishChoppingCalculatorView.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AlbionCalculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AlbionCalculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculator.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/AlbionCalculatorUpdater.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/AlbionCalculatorUpdater.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculatorUpdater/MainWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculator/AlbionCalculator.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/AlbionCalculator.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlbionCalculator/MainWindow.axaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,18 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "CorbyO"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;CorbyO&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/CorbyO/AlbionCalculator.git",
-    "accountId": "216cd0b6-0cea-42b0-84e9-1ad726317493"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/CorbyO/AlbionCalculator.git&quot;,
+    &quot;accountId&quot;: &quot;216cd0b6-0cea-42b0-84e9-1ad726317493&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0ceaca09f3944680b668dee8e1e0370b100a00/f7/eee67fcf/ClassicDesktopStyleApplicationLifetimeExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/33a65d1c3065441d921b46aff1c47107d930/f3/04dc550b/ZipFileExtensions.cs" root0="FORCE_HIGHLIGHTING" />
@@ -81,13 +82,14 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "settings.editor.selected.configurable": "com.android.studio.ml.templates",
     "vue.rearranger.settings.migration": "true",
     "폴더에 게시.Publish AlbionCalculator to folder.executor": "Run",
     "폴더에 게시.Publish AlbionCalculatorUpdater to folder.executor": "Run"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET 프로젝트.AlbionCalculatorUpdater">
+  <component name="RunManager" selected="폴더에 게시.Publish AlbionCalculator to folder">
     <configuration name="CI" type="BatchConfigurationType" factoryName="Batch">
       <module name="rider.module" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -166,6 +168,7 @@
       <workItem from="1771165226858" duration="1964000" />
       <workItem from="1771334844809" duration="5739000" />
       <workItem from="1771780751216" duration="8630000" />
+      <workItem from="1772411855035" duration="791000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />

@@ -1,0 +1,143 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="800"
+             x:Class="AlbionCalculator.FishChoppingCalculatorView">
+    
+    <UserControl.Styles>
+        <Style Selector="Button.TextButton">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <ContentPresenter Content="{TemplateBinding Content}"/>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+    </UserControl.Styles>
+
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="15">
+            <TextBlock Text="토막난 생선 효율 계산기" FontWeight="Bold" FontSize="20" Margin="0,0,0,10"/>
+
+            <!-- 입력 섹션 -->
+            <Border BorderBrush="#33FFFFFF" BorderThickness="1" CornerRadius="5" Padding="10">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="가격 입력" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock Text="토막난 생선 가격 (개당)"/>
+                    <TextBox Name="ChoppedFishPrice" Watermark="0" TextChanged="OnInputChanged"/>
+                </StackPanel>
+            </Border>
+
+            <!-- 결과 섹션 -->
+            <Border BorderBrush="#33FFFFFF" BorderThickness="1" CornerRadius="5" Padding="10">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="영양분별 가격 (토막 가격 × 영양분)" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock Text="클릭하여 복사하세요." FontSize="12" Foreground="Gray"/>
+
+                    <Grid ColumnDefinitions="Auto, 30, *" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+                        <Grid.Styles>
+                            <Style Selector="TextBlock">
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                                <Setter Property="Margin" Value="0,5"/>
+                            </Style>
+                        </Grid.Styles>
+
+                        <!-- 헤더 -->
+                        <!-- 1 -->
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="영양분 1"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="→" FontSize="16" HorizontalAlignment="Center"/>
+                        <Button Grid.Row="0" Grid.Column="2" Classes="TextButton" Click="OnCopyText">
+                            <TextBlock Name="Price1" Text="0" FontWeight="Bold"/>
+                            <Button.Flyout><Flyout ShowMode="TransientWithDismissOnPointerMoveAway"><TextBlock Text="복사되었습니다!"/></Flyout></Button.Flyout>
+                        </Button>
+
+                        <!-- 2 -->
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="영양분 2"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="→" FontSize="16" HorizontalAlignment="Center"/>
+                        <Button Grid.Row="1" Grid.Column="2" Classes="TextButton" Click="OnCopyText">
+                            <TextBlock Name="Price2" Text="0" FontWeight="Bold"/>
+                            <Button.Flyout><Flyout ShowMode="TransientWithDismissOnPointerMoveAway"><TextBlock Text="복사되었습니다!"/></Flyout></Button.Flyout>
+                        </Button>
+
+                        <!-- 3 -->
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="영양분 3"/>
+                        <TextBlock Grid.Row="2" Grid.Column="1" Text="→" FontSize="16" HorizontalAlignment="Center"/>
+                        <Button Grid.Row="2" Grid.Column="2" Classes="TextButton" Click="OnCopyText">
+                            <TextBlock Name="Price3" Text="0" FontWeight="Bold"/>
+                            <Button.Flyout><Flyout ShowMode="TransientWithDismissOnPointerMoveAway"><TextBlock Text="복사되었습니다!"/></Flyout></Button.Flyout>
+                        </Button>
+
+                        <!-- 4 -->
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="영양분 4"/>
+                        <TextBlock Grid.Row="3" Grid.Column="1" Text="→" FontSize="16" HorizontalAlignment="Center"/>
+                        <Button Grid.Row="3" Grid.Column="2" Classes="TextButton" Click="OnCopyText">
+                            <TextBlock Name="Price4" Text="0" FontWeight="Bold"/>
+                            <Button.Flyout><Flyout ShowMode="TransientWithDismissOnPointerMoveAway"><TextBlock Text="복사되었습니다!"/></Flyout></Button.Flyout>
+                        </Button>
+
+                        <!-- 6 -->
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="영양분 6"/>
+                        <TextBlock Grid.Row="4" Grid.Column="1" Text="→" FontSize="16" HorizontalAlignment="Center"/>
+                        <Button Grid.Row="4" Grid.Column="2" Classes="TextButton" Click="OnCopyText">
+                            <TextBlock Name="Price6" Text="0" FontWeight="Bold"/>
+                            <Button.Flyout><Flyout ShowMode="TransientWithDismissOnPointerMoveAway"><TextBlock Text="복사되었습니다!"/></Flyout></Button.Flyout>
+                        </Button>
+
+                        <!-- 8 -->
+                        <TextBlock Grid.Row="5" Grid.Column="0" Text="영양분 8"/>
+                        <TextBlock Grid.Row="5" Grid.Column="1" Text="→" FontSize="16" HorizontalAlignment="Center"/>
+                        <Button Grid.Row="5" Grid.Column="2" Classes="TextButton" Click="OnCopyText">
+                            <TextBlock Name="Price8" Text="0" FontWeight="Bold"/>
+                            <Button.Flyout><Flyout ShowMode="TransientWithDismissOnPointerMoveAway"><TextBlock Text="복사되었습니다!"/></Flyout></Button.Flyout>
+                        </Button>
+
+                        <!-- 10 -->
+                        <TextBlock Grid.Row="6" Grid.Column="0" Text="영양분 10"/>
+                        <TextBlock Grid.Row="6" Grid.Column="1" Text="→" FontSize="16" HorizontalAlignment="Center"/>
+                        <Button Grid.Row="6" Grid.Column="2" Classes="TextButton" Click="OnCopyText">
+                            <TextBlock Name="Price10" Text="0" FontWeight="Bold"/>
+                            <Button.Flyout><Flyout ShowMode="TransientWithDismissOnPointerMoveAway"><TextBlock Text="복사되었습니다!"/></Flyout></Button.Flyout>
+                        </Button>
+
+                        <!-- 14 -->
+                        <TextBlock Grid.Row="7" Grid.Column="0" Text="영양분 14"/>
+                        <TextBlock Grid.Row="7" Grid.Column="1" Text="→" FontSize="16" HorizontalAlignment="Center"/>
+                        <Button Grid.Row="7" Grid.Column="2" Classes="TextButton" Click="OnCopyText">
+                            <TextBlock Name="Price14" Text="0" FontWeight="Bold"/>
+                            <Button.Flyout><Flyout ShowMode="TransientWithDismissOnPointerMoveAway"><TextBlock Text="복사되었습니다!"/></Flyout></Button.Flyout>
+                        </Button>
+
+                        <!-- 20 -->
+                        <TextBlock Grid.Row="8" Grid.Column="0" Text="영양분 20"/>
+                        <TextBlock Grid.Row="8" Grid.Column="1" Text="→" FontSize="16" HorizontalAlignment="Center"/>
+                        <Button Grid.Row="8" Grid.Column="2" Classes="TextButton" Click="OnCopyText">
+                            <TextBlock Name="Price20" Text="0" FontWeight="Bold"/>
+                            <Button.Flyout><Flyout ShowMode="TransientWithDismissOnPointerMoveAway"><TextBlock Text="복사되었습니다!"/></Flyout></Button.Flyout>
+                        </Button>
+
+                        <!-- 30 -->
+                        <TextBlock Grid.Row="9" Grid.Column="0" Text="영양분 30"/>
+                        <TextBlock Grid.Row="9" Grid.Column="1" Text="→" FontSize="16" HorizontalAlignment="Center"/>
+                        <Button Grid.Row="9" Grid.Column="2" Classes="TextButton" Click="OnCopyText">
+                            <TextBlock Name="Price30" Text="0" FontWeight="Bold"/>
+                            <Button.Flyout><Flyout ShowMode="TransientWithDismissOnPointerMoveAway"><TextBlock Text="복사되었습니다!"/></Flyout></Button.Flyout>
+                        </Button>
+
+                        <!-- 200 -->
+                        <TextBlock Grid.Row="10" Grid.Column="0" Text="영양분 200"/>
+                        <TextBlock Grid.Row="10" Grid.Column="1" Text="→" FontSize="16" HorizontalAlignment="Center"/>
+                        <Button Grid.Row="10" Grid.Column="2" Classes="TextButton" Click="OnCopyText">
+                            <TextBlock Name="Price200" Text="0" FontWeight="Bold"/>
+                            <Button.Flyout><Flyout ShowMode="TransientWithDismissOnPointerMoveAway"><TextBlock Text="복사되었습니다!"/></Flyout></Button.Flyout>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

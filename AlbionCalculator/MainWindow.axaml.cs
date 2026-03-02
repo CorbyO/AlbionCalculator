@@ -29,6 +29,7 @@ public partial class MainWindow : Window
         _views["Welcome"] = new WelcomeView();
         _views["Resell"] = new ResellCalculatorView();
         _views["FishSauce"] = new FishSauceCalculatorView();
+        _views["FishChopping"] = new FishChoppingCalculatorView();
 
         var functionList = this.FindControl<ListBox>("FunctionList");
         if (functionList != null)
